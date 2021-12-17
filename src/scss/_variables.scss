@@ -1,0 +1,73 @@
+//  Color
+$primary-color: #0066f5 !default;
+$pre-sl: #fccdea !default;
+$pri-cl: #f8c1f1 !default;
+$pri-cl2: #b31774 !default;
+$pre-sh: #fe4acd !default;
+$pri-cl3: #de8fd5 !default;
+$pri-cl4: #1d022f !default;
+$bk: #000000 !default;
+$pri-cl5: #460871 !default;
+$sec-cl: #460871 !default;
+$sec-cl2: #615669 !default;
+$wt-cl: #fff !default;
+$pg-wd: #000;
+$wt-cl1: #FFFFFF !default;
+$wt-cl2: #CCC5D1 !default;
+$red-color: #FF0000 !default;
+
+
+// Font Sizes
+$font-sm: 0.875rem; // 14px
+$font-med: 1.125rem; // 18px
+$font-lg: 1.25rem;
+$font-xlg: 3.25rem;
+
+// Responsive Breakpoints
+$size-xxs: 375px !default;
+$size-xs: 480px !default;
+// $size-sm: 600px !default;
+$size-sm: 576px !default;
+// $size-md: 840px !default;
+$size-md: 768px !default;
+// $size-lg: 1080px !default;
+$size-lg: 992px !default;
+$size-xl: 1200px !default;
+$size-xxl: 1440px !default;
+
+// Z-index
+$zindex-0: 1 !default;
+$zindex-4: 400 !default;
+
+//#c389bc
+
+// NProgress Color
+$nprogress-color: $pri-cl3 !default;
+
+// Unit Sizes
+$unit-o: .05rem !default;
+$unit-h: .1rem !default;
+$unit-1: .2rem !default;
+$unit-2: .4rem !default;
+$unit-3: .6rem !default;
+$unit-4: .8rem !default;
+$unit-5: 1rem !default;
+$unit-6: 1.2rem !default;
+$unit-7: 1.4rem !default;
+$unit-8: 1.6rem !default;
+$unit-9: 1.8rem !default;
+$unit-10: 2rem !default;
+$unit-12: 2.4rem !default;
+$unit-16: 3.2rem !default;
+
+// Other Sizes
+$border-width-sm: $unit-h !default;
+
+
+// Core Colors
+$primary-color: #0066F5 !default;
+$secondary-color: #0A2E65 !default;
+
+// Z-index
+$zindex-0: 1 !default;
+$zindex-4: 400 !default;

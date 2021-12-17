@@ -1,0 +1,198 @@
+
+@import "index";
+@import "mixins";
+
+
+  .section {
+    min-height: 100vh;
+    max-height: 890px;
+    padding: 1.5rem 10vw 0 10vw;
+
+    @include breakpoint-down(smallest) {
+      min-height: 200vh;;
+    }
+
+      .row {
+        width: 100%;
+        min-height: 500px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        @include breakpoint-down(small) {
+          min-height: 400px;
+        }
+
+        .section-heading {
+          font-size: 2.3rem;
+          color: $theme-color;
+          font-weight: 600;
+          text-align: center;
+        }
+
+        .taltv__img{
+          width: 100%;
+          height: 20rem;
+          object-fit: cover;
+          margin-top: 1rem;
+          border-radius: 5px;
+
+          @include breakpoint-down(medium) {
+            object-fit: contain;
+            height: 10rem;
+          }
+
+
+
+        }
+
+        .talk{
+          font-size: 35px;
+          font-weight: 500;
+          color: $theme-color;
+          text-align: center;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 20%;
+            background-color: grey;
+            opacity: .5;
+            bottom: -.9rem;
+            margin: auto;
+          }
+
+          span{
+            color: grey;
+          }
+        }
+
+        &:nth-of-type(1) .image {
+          background-image: url(../img/abaout-Us.png);
+        }
+
+        &:nth-of-type(2) .image {
+          background-image: url(../img/abaout-Us.png);
+          position: relative;
+          top: 0.5rem;
+        }
+
+        &:nth-of-type(3) .image {
+          background-image: url(../img/abaout-Us.png);
+        }
+
+        .image {
+          height: 40%;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        .heading {
+          color: $theme-color;
+          font-size: 1.4rem;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          position: relative;
+
+          //&::before {
+          //  content: "";
+          //  position: absolute;
+          //  height: 3px;
+          //  width: 20%;
+          //  background-color: grey;
+          //  opacity: .5;
+          //  top: -1.5rem;
+          //  margin: auto;
+          //}
+        }
+
+        .card-body {
+          margin-top: 2rem;
+          color: lightslategray;
+          font-size: 0.95rem;
+          padding-right: 10%;
+          line-height: 1.65rem;
+        }
+      }
+
+    .subheading {
+      color: lightslategrey;
+      margin: 1.5rem 0;
+      padding-right: 15%;
+      font-size: 0.95rem;
+    }
+  }
+
+
+
+  .latest_artist{
+    display: block;
+    padding: 0 2rem 0 2rem;
+    background: rgba(230, 225, 225, 0.116);
+    width: 100%;
+    height: 40rem;
+
+    @include breakpoint-down(small) {
+      padding: 0;
+    }
+
+    h2{
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 3rem;
+      font-size: 2.3rem;
+      color: $theme-color;
+
+
+      @include breakpoint-down(small) {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 400;
+      }
+    }
+    .artist__container{
+      display: flex;
+      padding: 0 2rem 2rem 2rem;
+      @include breakpoint-down(small) {
+        padding: 0;
+      }
+
+      width: 100%;
+      //height: 100%;
+
+
+      @include breakpoint-down(small) {
+        flex-direction: row;
+      }
+
+      .artist__content{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        margin: 0;
+
+
+        h3{
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+          padding-top: 1.2rem;
+          margin: 0;
+          text-align: center;
+          overflow: auto;
+          color: $pri-cl4;
+        }
+        p{
+          font-size: .9em;
+          max-height: 10rem;
+          padding-top: .2rem;
+          //background: #efefef;
+        }
+      }
+    }
+  }
+
+

@@ -1,0 +1,196 @@
+@import "index";
+@import "mixins";
+
+.header {
+  //min-height: 690px;
+  //height: 105vh;
+  //max-height: 890px;
+  display: flex;
+  transition:  .9s ease-in-out;
+
+
+  .swipe{
+    width: 100%;
+    min-height: 600px;
+    max-height: 700px;
+    position: relative;
+    top: 2rem;
+    transition:  .4s ease-in-out;
+
+    @include breakpoint-down(medium) {
+      top: 2rem;
+      min-height: 500px;
+      max-height: 600px;
+    }
+
+    .taltv__img {
+      filter: brightness(0.3);
+      width: 100vw;
+
+
+      @include breakpoint-down(medium) {
+        height: 100vh;
+      }
+
+
+      .talktv__figure{
+        width: 100vw;
+        margin: 0;
+        padding: 0;
+      }
+
+    }
+
+    .talktv__figcaption {
+      position: absolute;
+      top: 4rem;
+      z-index: 1000;
+      width: 100%;
+      .talktv {
+
+
+        .talk__content {
+          padding: 8rem 10rem 4rem 10rem;
+          @include breakpoint-down(medium) {
+            padding: 5rem;
+          }
+          @include breakpoint-down(small) {
+            padding: 4rem 1.5rem;
+          }
+          .container {
+            color: #fff;
+            text-align: center;
+            h4 {
+              font-weight: 500;
+              font-size: 30px;
+              line-height: 35px;
+              color: #ffffff;
+              padding: 0;
+              margin: 0;
+
+              @include breakpoint-down(xsmall) {
+                font-size: 25px;
+              }
+
+            }
+            h1 {
+              font-weight: 900;
+              font-size: 120px;
+              line-height: 160px;
+              color: #ffffff;
+              padding: 0;
+              margin: 0;
+
+              @include breakpoint-down(medium) {
+                font-size: 55px;
+                line-height: 80px;
+              }
+
+              @include breakpoint-down(xsmall) {
+                font-size: 40px;
+                line-height: 80px;
+              }
+
+              p{
+                font-family: "Raleway", sans-serif;
+                font-weight: 200;
+                @include breakpoint-down(xsmall) {
+                  font-size: 8px;
+                  line-height: 40px;
+                }
+              }
+
+              .color{
+                // color: #ba73bb;
+                color: $pri-cl5;
+              }
+            }
+
+            .talktv__content__btn {
+              margin-top: 4rem;
+              .started__btn {
+                background: $pri-cl5;
+                padding: 1rem 3rem;
+                border-radius: 5px;
+                border: none;
+                color: #fff;
+                font-weight: 500;
+                margin-right: 1.5rem;
+                @include breakpoint-down(small) {
+                  padding: 0.9rem 1.2rem;
+                  margin-right: 0.5rem;
+                  font-size: 14px;
+                }
+
+                @include breakpoint-down(xxsmall) {
+                  padding: 0.5rem 1.2rem;
+                  margin-right: 0.5rem;
+                  font-size: 8px;
+                }
+              }
+              .talk__btn {
+                border: 1px solid $pri-cl5;
+                background-color: transparent;
+                border-radius: 5px;
+                color: $wt-cl;
+                padding: 1rem 3rem;
+                @include breakpoint-down(small) {
+                  padding: 0.8rem 1.6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+
+
+  .header-right {
+    width: 60vw;
+    background-image: url(../img/Group_bg.svg);
+    background-position: center;
+    background-size: 105%;
+    background-repeat: no-repeat;
+    overflow: visible;
+  }
+}
+
+@media (max-width: 960px) {
+  header {
+    background-size: 100%;
+    background-position: -50% 0%;
+  }
+}
+
+@media (max-width: 700px) {
+
+  header{
+    flex-direction: column-reverse;
+    justify-content: center !important;
+  }
+  .header-right {
+    width: 100vw !important;
+    height: 300px;
+    margin-bottom: 3rem;
+    background-size: contain !important;
+  }
+
+  .header-left {
+    width: 100vw !important;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    background-size: 160%;
+
+    .header-left {
+      justify-content: flex-start;
+    }
+
+  }
+}

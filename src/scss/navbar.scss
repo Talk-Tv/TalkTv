@@ -1,0 +1,222 @@
+@import "index";
+@import "mixins";
+
+.mobile-nav-toggle {
+    height: 4px;
+    width: 1.3rem;
+    border-radius: 5px;
+    position: fixed;
+    background-color: $theme-color;
+    right: 2rem;
+    top: 2rem;
+    margin: 5px 0;
+    cursor: pointer;
+    z-index: 10;
+    transition:  .4s ease-in-out;
+    align-self: center;
+    display: none;
+
+    &.scroll{
+      top: 2rem;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      transform: translateY(-7px);
+      height: 3px;
+      width: 1rem;
+      right: 0;
+      border-radius: 5px;
+      left: 0;
+      background-color: $theme-color;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      height: 3px;
+      transform: translateY(7px);
+      width: 1.6rem;
+      border-radius: 5px;
+      background-color: $theme-color;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+
+    &.active {
+      background-color: transparent !important;
+      transform: rotate(0deg);
+
+      &::after {
+        transform: translateY(0px) rotateZ(-45deg);
+        opacity: 1;
+        background-color: white;
+      }
+
+      &::before {
+        transform: translateY(-1px) rotate(45deg);
+        opacity: 1;
+        background-color: white;
+        width: 1.6rem;
+      }
+    }
+  }
+
+  .navbar-container {
+    width: 100vw;
+    height: 5rem;
+    padding: 0.1rem 7vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    box-shadow: 1px 0px 5px 1px rgba(128, 128, 128, 0.514);
+    transition:  .4s ease-in-out;
+    z-index: 3;
+
+    .links-container {
+      width: 100%;
+      &.right {
+        position: relative;
+        right: 0rem;
+        text-align: end;
+      }
+      .link {
+        font-size: 1rem;
+        margin: auto 0.8rem;
+        color: $theme-color;
+        text-transform: uppercase;
+        font-family: "Raleway", sans-serif;
+        padding-bottom: 5px;
+        transition: all 0.5s ease-out;
+        cursor: pointer;
+        border-bottom: 2px solid transparent;
+        text-decoration: none;
+        text-emphasis: none;
+
+        &.active,
+        &:hover {
+          border-color: $theme-color;
+        }
+      }
+    }
+
+
+
+    .logo-container {
+      width: fit-content;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 7rem;
+
+
+      // .logo-text {
+      //   color: $theme-color;
+      //   font-size: 1.35rem;
+      //   font-family: "Montserrat", sans-serif;
+      //   cursor: pointer;
+      // }
+    }
+  }
+
+
+  .logo {
+    height: 7.5rem;
+    width: 8rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+    background-image: url(../img/talktvb.png);
+    position: relative;
+    top: 3px;
+    left: -1rem;
+
+  }
+
+
+  @media (max-width: 862px) {
+    .navbar-container .links-container {
+      display: none;
+    }
+
+    .mobile-nav-toggle {
+      display: flex !important;
+    }
+  }
+
+
+  //////////////////////Mobile Nav//////////////
+
+  .mobile-nav{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+    background-color:  $theme-color;
+    z-index: 4;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10vw;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+    opacity: 0;
+
+    @include breakpoint-down(small) {
+      padding-top: 5vw;
+    }
+
+
+    &.active{
+      transform: translateX(0);
+      opacity: 1;
+    }
+
+
+    .logo {
+      background-image: url(../img/talktv.png);
+      align-self: center;
+      height: 8rem;
+      width: 10rem;
+      background-size: contain;
+      background-position: top;
+
+      @include breakpoint-down(medium) {
+        height: 8rem;
+        width: 8rem;
+      }
+    }
+
+
+
+    .mobile-nav-item{
+      color: white;
+      font-size: 1.6rem;
+      margin: 1rem;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      transition: all .4s ease-in-out;
+
+      @include breakpoint-down(medium) {
+        font-size: 1.4rem;
+      }
+
+      @include breakpoint-down(small) {
+        font-size: 1rem;
+      }
+      @include breakpoint-down(xsmall) {
+        font-size: 1rem;
+      }
+
+      &.active, &:hover{
+        border-color: white;
+      }
+    }
+
+  }

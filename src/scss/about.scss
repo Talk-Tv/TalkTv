@@ -1,0 +1,247 @@
+.about{
+  display: block;
+
+  @import "index";
+  @import "mixins";
+
+  .section {
+    min-height: 100vh;
+    max-height: 890px;
+    padding: 3rem 10vw 0 10vw;
+
+
+    .section-heading {
+      margin-top: 2rem;
+      font-size: 2.3rem;
+      color: $theme-color;
+      font-weight: 600;
+    }
+
+    .row-container {
+      display: flex;
+      flex-direction: row;
+      margin-top: 4rem;
+      justify-content: space-between;
+
+      .row {
+        width: 90%;
+        min-height: 500px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+
+        .talk{
+          font-size: 35px;
+          font-weight: 500;
+          color: $theme-color;
+          text-align: center;
+          position: relative;
+
+          &::before {
+            content: "";
+            position: absolute;
+            height: 3px;
+            width: 20%;
+            background-color: grey;
+            opacity: .5;
+            bottom: -.9rem;
+            margin: auto;
+          }
+
+          span{
+            color: grey;
+          }
+        }
+
+        &:nth-of-type(1) .image {
+          background-image: url(../img/abaout-Us.png);
+        }
+
+        &:nth-of-type(2) .image {
+          background-image: url(../img/abaout-Us.png);
+          position: relative;
+          top: 0.5rem;
+        }
+
+        &:nth-of-type(3) .image {
+          background-image: url(../img/abaout-Us.png);
+        }
+
+        .image {
+          height: 40%;
+          background-position: center;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+
+        .heading {
+          color: $theme-color;
+          font-size: 1.4rem;
+          margin-top: 2rem;
+          margin-bottom: 1rem;
+          position: relative;
+
+          //&::before {
+          //  content: "";
+          //  position: absolute;
+          //  height: 3px;
+          //  width: 20%;
+          //  background-color: grey;
+          //  opacity: .5;
+          //  top: -1.5rem;
+          //  margin: auto;
+          //}
+        }
+
+        .card-body {
+          color: lightslategray;
+          font-size: 0.95rem;
+          padding-right: 10%;
+          line-height: 1.65rem;
+        }
+      }
+    }
+
+    .subheading {
+      color: lightslategrey;
+      margin: 1.5rem 0;
+      padding-right: 15%;
+      font-size: 0.95rem;
+    }
+  }
+
+  .section-one {
+    .question {
+      text-align: center;
+      font-size: 0.95rem;
+      text-transform: uppercase;
+      width: 100%;
+      color: $theme-color;
+    }
+
+    .section-heading {
+      text-align: center;
+    }
+  }
+
+  @media (max-width:700px) {
+    .section-one {
+      max-height: fit-content !important;
+    }
+
+    .row-container {
+      flex-direction: column !important;
+
+      .row {
+        width: 100% !important;
+        flex-direction: column !important;
+        min-height: fit-content !important;
+        margin: 2rem 0;
+
+        &:nth-of-type(2) {
+          flex-direction: column !important;
+          width: 100%;
+
+          .image {
+            margin-right: 1rem;
+          }
+        }
+
+        .image {
+          height: 100%;
+          width: 100%;
+          height: 300px !important;
+        }
+
+        .text {
+          width: 100%;
+          padding: 0.5rem;
+
+          .card-body{
+            font-size: 12px;
+          }
+        }
+      }
+    }
+  }
+
+
+
+  .latest_artist{
+    display: block;
+    padding: 0 2rem 0 2rem;
+    background: rgba(230, 225, 225, 0.116);
+    width: 100%;
+    height: 45rem;
+
+    @include breakpoint-down(small) {
+      padding: 0;
+      height: 38rem;
+    }
+
+    h2{
+      text-align: center;
+      font-weight: 600;
+      margin-bottom: 3rem;
+      font-size: 2.3rem;
+      color: $theme-color;
+
+
+      @include breakpoint-down(small) {
+        font-size: 1.8rem;
+        text-align: center;
+        font-weight: 400;
+      }
+    }
+    .artist__container{
+      display: flex;
+      padding: 0 2rem 2rem 2rem;
+      @include breakpoint-down(small) {
+        padding: 0;
+      }
+
+      width: 100%;
+      //height: 100%;
+
+
+      @include breakpoint-down(small) {
+        flex-direction: row;
+      }
+
+      .artist__content{
+        display: flex;
+        flex-direction: column;
+        padding: 0 2rem;
+        margin: 0;
+
+        .taltv__img{
+          width: 100%;
+          height: 20rem;
+          object-fit: contain;
+          margin-top: 1rem;
+          border-radius: 5px;
+        }
+
+        h3{
+          font-size: 20px;
+          line-height: 30px;
+          font-weight: 600;
+          padding-top: 1.2rem;
+          margin: 0;
+          text-align: center;
+          overflow: auto;
+          color: $pri-cl4;
+        }
+        p{
+          font-size: .9em;
+          max-height: 10rem;
+          padding-top: .2rem;
+          color: lightslategray;
+        }
+      }
+    }
+  }
+
+
+
+}
