@@ -43,7 +43,7 @@ export default class Footer extends Component {
           </div>
 
           <div className="address col">
-            <div className="text">11, Evergreen Rd, Agidingbi, Ikeja</div>
+            <div className="text">No2, Craig street, Shomolu, Lagos</div>
             <div className="text">+234 811 053 9771</div>
             <div className="text">talktvnaija1@gmail.com</div>
           </div>

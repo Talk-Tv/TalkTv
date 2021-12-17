@@ -69,7 +69,7 @@ export default class Header extends Component {
                                         <h4>Welcome</h4>
                                         <h1>TALK <span className="color">TV</span></h1>
                                         <p>
-                                            Talk Tv gospel entertainment is the number one leading gospel Entertainment platform on Africa. We are making Jesus favor. Through enticing gospel content.
+                                            Listen to spirit filled messages from your favorite preacher.
                                         </p>
 
 
@@ -100,7 +100,7 @@ export default class Header extends Component {
                                         <h4>Welcome</h4>
                                         <h1>TALK <span className="color">TV</span></h1>
                                         <p>
-                                            Talk Tv gospel entertainment is the number one leading gospel Entertainment platform on Africa. We are making Jesus favor. Through enticing gospel content.
+                                            Follow up your Favorite Gospel artist with the latest gist and updates.
                                         </p>
 
                                         <div className="talktv__content__btn">
